@@ -19,7 +19,7 @@ class User(SqlAlchemyBase):
     modified_date = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now)
 
     def __repr__(self):
-        return ' '.join(['<User>', str(self.id), str(self.name), str(self.email)])
+        return ' '.join(['<Colonist>', str(self.id), str(self.surname), str(self.name)])
 
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
